@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveToWeb - Google Drive Hosting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(120deg, #a1c4fd, #c2e9fb); min-height: 100vh; }
+        .card { background: rgba(255, 255, 255, 0.9); border-radius: 15px; }
+        .btn-custom { background: #4CAF50; color: white; border-radius: 25px; }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="text-center mb-5">
+                    <h1 class="display-4 fw-bold text-primary">DriveToWeb</h1>
+                    <p class="lead">अपने Google Drive फोल्डर को वेबसाइट बनाएं</p>
+                </div>
+
+                <div class="card p-4 mb-4">
+                    <input type="text" id="driveUrl" class="form-control mb-3" 
+                           placeholder="Google Drive फोल्डर URL यहाँ डालें...">
+                    <button onclick="generateLink()" class="btn btn-custom w-100">
+                        वेबसाइट लिंक बनाएं
+                    </button>
+                </div>
+
+                <div class="card p-4" id="resultSection" style="display:none;">
+                    <h4>आपकी वेबसाइट तैयार है! 🎉</h4>
+                    <div class="input-group mb-3">
+                        <input type="text" id="websiteLink" class="form-control" readonly>
+                        <button class="btn btn-success" onclick="copyLink()">कॉपी करें</button>
+                    </div>
+                    <a id="visitLink" target="_blank" class="btn btn-outline-primary">
+                        वेबसाइट देखें
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
